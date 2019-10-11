@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Todos from './components/Todos';
 
 function App() {
+  this.state = {
+    todos: [
+      {
+        id: 1,
+        title: 'Take out the trash',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'Dinner with girlly',
+        completed: false
+      },
+      {
+        id: 3,
+        title: 'meeting with boss',
+        completed: false
+      }
+    ]
+  };
+  console.log(this.state.todos);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Todos />
     </div>
   );
 }
